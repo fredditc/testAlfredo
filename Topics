@@ -1,0 +1,72 @@
+
+-stringbuffer and stringbuilder:
+StringBuilder: 16 caracters default (Size and content can be changed, mutables) Methods are not synchronized or thread-safe
+(more efficiente when you donde use thread.)
+StringBuffer: methods are synchronized, allows working with multiple execution threads (threads).
+
+-synchornize:
+It ensures that there are not two threads executing the same method. If there are multiple threads trying to execute the same
+method at the same time, one will achieve its execution and the others will have to wait for it to finish to get their turn.
+
+-deadlock
+DeadLock:
+ is when two or more threads block each other, waiting for each other, without progressing any of them
+Mutual exclusion: Mutual exclusion algorithms are used in concurrent programming to prevent more than one process from entering at a time.
+
+-mutable and inmutable:
+Mutable:
+means that state or data can be changed after it's created.
+everything(except for strings and all the wrapper classes) is mutable by default.
+
+Inmutable:
+It means we can't change anything to the existing objects.
+Cualquier operacion de modificacion produce una instancia nueva. Buena para compartir entre hilos de ejecuciiones diferentes.
+String objectes are inmutable.
+
+Final:
+apply constraints to a class, to a method or field of a class, or to a variable.
+Final classes: can't use inheritance
+Final methods or fields: cannot be overridden
+Variables: assign a value when declared (way to declare constant)
+
+Finalize: it is a method that can be overridden and when java detects that there are no more references to the object, it releases resources
+
+Finally:
+In a try-catch structure there is a finally block that allows the always included code to be executed if there is an exception
+
+Throwable 
+Error vs Exception
+
+When the error occurs and cannot be recovered and they are not errors because of the code that was written.
+(VirtualMachineError -> OutOfMemoryError) 
+
+Exception
+IOException (Checked) -> FileNotFoundExceptiom
+RunTimeException (unchecked) -> NullPointer Arithmetic 
+
+To create your own exceptions you must create the class and extend Exception and in the constructor invoke super(message)
+
+Access control: allows the compiler to interpret what is visible or usable outside the class and what is not through access modifiers:
+Públic
+Protected 
+Prívate 
+default 
+
+Spring vs spring boot
+Spring Boot is a variation of Spring that comes with the configuration, which previously had to be done manually,
+making development with Spring much easier, allowing the programmer not to have to configure anything, just worry about the business logic.
+
+*tipos de inyeccion de dependencias
+-Contructor
+-Setter
+-and anottations
+
+Inyeccion de dependencias (DI): it is a design pattern that serves to “inject” components to the classes that we have implemented. 
+Those components are contracts that our classes need in order to function.
+
+IOC: (delegating responsibility) The purpose is due to the need to want to control its execution flow, automatically and transparently,to give control of that 
+flow to an “external agent”, normally a framework
+
+beanFactory: is a contairne that load beans on-demand and its lifecycle start when you get the specific bean
+
+appContext: is a container that loads all beans at startup. BeanFactory is lightweight as compared to ApplicationContext.
