@@ -86,3 +86,18 @@ The run() method is where all the work of the class will be done.
 Segunda manera:
 You can create a new class that implements Runnable interface and overrides the method run.
 
+Que es un patron de diseño:
+ These are templates that identify system problems and provide appropriate solutions to general problems.
+
+-Creational patterns:
+	*Singleton:
+	*Prototype:
+
+-Structural patterns:
+	*Adapter:
+	*Bridge:
+
+-Behavior patterns:
+	*State:
+	*Interpreter:
+
