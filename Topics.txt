@@ -70,3 +70,19 @@ flow to an “external agent”, normally a framework
 beanFactory: is a contairne that load beans on-demand and its lifecycle start when you get the specific bean
 
 appContext: is a container that loads all beans at startup. BeanFactory is lightweight as compared to ApplicationContext.
+
+SobreCarga:
+allows you to declare methods that are called the same but receive different parameters
+
+SobreEscritura:
+a class can re-define the methods of its parent class, in this way it can create new methods with the same name of its superClass
+
+2 maneras de crear threads
+
+Primera manera:
+creates a new class MyThread that extends the Thread class and overrides the Thread.run() method with its own implementation. 
+The run() method is where all the work of the class will be done.
+
+Segunda manera:
+You can create a new class that implements Runnable interface and overrides the method run.
+
