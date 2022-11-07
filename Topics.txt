@@ -72,10 +72,10 @@ beanFactory: is a contairne that load beans on-demand and its lifecycle start wh
 appContext: is a container that loads all beans at startup. BeanFactory is lightweight as compared to ApplicationContext.
 
 SobreCarga:
-allows you to declare methods that are called the same but receive different parameters
+allows you to declare methods that are called the same but receive different parameters (different signature).
 
 SobreEscritura:
-a class can re-define the methods of its parent class, in this way it can create new methods with the same name of its superClass
+When a class can re-define the methods of its parent class, in this way it can create new methods with the same name of its superClass (same signature).
 
 2 maneras de crear threads
 
