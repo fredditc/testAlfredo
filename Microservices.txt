@@ -1,0 +1,112 @@
+Requirements -> Plan & design -> Develop -> Test -> Release -> Monitor -> Maintain
+User/Analyst   		     Devs/architecture     Project Manager	Operations team
+
+Microservicio:
+set of practices 
+increase speed
+scale
+principal and architectural patterns
+
+*Micro
+Does one thing 
+Scope of functionalities
+identify sub-domains
+
+Service: 
+Independently deployable component
+Message based communication
+Are small, autonomous services that work together
+
+**Monolitic:
+Single database
+User interface
+expose apis 
+multiple instances (scale)
+
+pros: Simple to develop, build, test, deploy
+cons: code harder to undestand, growing teams, new team members productivity, huge database
+
+*Microservice:
+Identify subdomains and have dependencies. Each subdomain have their database.
+
+****Organization: team por subdomain, right-sized teams, independent, agile and devops
+Code base: have documentation, and repository (git).
+
+****Data Store: Independent, different requirements (realtion, no relational)
+
+****User interface: Independent teams, own set of components, unique UI, single application. 
+UI composition (server, client side)
+
+****Services: remote procedure invocation (request/reply) sync or async, rest, soap
+Mesagging: broker or channel (publish, subscribe) kafka
+Protocol Format Exchange (text, xml, json, yaml) easy complement 
+Apis and contracts: swagger for check the documentation (what do you need for invocate the service)
+
+****Distributed services: 
+Service registry: location change is like a phone book. self registration (eureka, zookeeper)
+Cross-origin resource sharing: same server(same origin-policy) same protocol, server and port.
+Browser restrict cross-origin(When the services isn't in the same server) Access control allow origin throught 
+http headers for comunicate to other service from other server.
+
+==========================================================================================================================
+Circuit Breaker: network failed, heavy load, domino effect, invoke via proxy and deviate calls (Hystric, JRugged)
+
+-The Circuit Breaker pattern prevents an application from repeatedly attempting an operation that is likely to 
+fail, allowing the application to continue executing without wasting resources until the problem is resolved.
+Status:
+-Closed (Initial state): The circuit is closed and the flow flows uninterrupted.
+-Open: The circuit is open and the flow interrupted. Returns the last known exception to the application.
+-Half-open: Circuit is half open giving flow a chance to restore
+
+The proxy keeps a counter with the number of errors that occur when making the call, if the number of errors 
+exceeds the limit, the proxy sets the state to Open. At the same time a timer is started.
+
+While the state is Open, the calls to the service will not be made, automatically returning the last known error.
+How long the proxy remains in this state is marked by the timer setting.
+
+When the timer completes its cycle, the state becomes Half-Open. In this state, the call to the service 
+is available again at least once so that:
+
+If the request succeeds it is assumed that the error has been corrected, the error counter is reset to zero and
+the proxy state is set to Closed again. Everything works correctly again.
+And if an error occurs in the request, it is assumed that the error continues, the state is set back to Open
+and the timer is restarted. The service/resource continues to be inaccessible.
+
+==========================================================================================================================
+
+Gateway: single entry points for each client, unified interface, cross-cutting concerns
+
+Provides a single gateway to our entire ecosystem of microservices for requests from mobile devices, 
+websites, or other external systems (Dynamic routing monitoring, security).
+
+==========================================================================================================================
+****Security: 
+Authorization and Autentication:IAM (indentify and access management) rules for users.
+single sign-on (OAuth 2.0, SAML)
+
+Access Token: stores information about user, exchange between services (Json Web Token) or cookies.
+
+****Scalabilty and Availability
+Scalability vertical: more cpu or RAM
+horizontal: more machines, service replication
+
+Client Load Balancing: 
+several instances, which instance to choose, registry, round robin, weithgt, capacity.  (Ribbon, Meraki)
+
+Availabilty: Be operational
+
+****Monitoring: Many machines for to see clearly the status of monitoring. (Centralized, Visual) Kibana, Grafana
+health check: service running, health check api, database or host status for each service. 
+	Log: Undertand behavior, write logs, read each log file, agregate logs for each service instace.
+Exception traking: throw a exception, record exceptions, investigate and resolved.
+Metrics: perfomance issues, gather statidistics and aggreate metrics.
+
+Auditing: behavior of users, login, logout, visited pages, browsed products.
+
+
+****Deployment
+Host: prhysical or virtual server, on premise, in the cloud
+Micro service per host, several services  per host.
+Containers: packaging micro service with dependencies, container image and easy to move from enviroment (QA, dev)
+Orchestrator: multiple container, multiple machines. (Kubernates, docker) 
+Continuos Delivery: Automate deployment, cost-effective, quick and reliable
