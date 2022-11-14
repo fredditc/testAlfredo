@@ -15,7 +15,7 @@ identify sub-domains
 Service: 
 Independently deployable component
 Message based communication
-Are small, autonomous services that work together
+Are small, autonomous services that collaborate to form an application.
 
 **Monolitic:
 Single database
