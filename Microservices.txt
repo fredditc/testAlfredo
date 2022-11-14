@@ -110,3 +110,24 @@ Micro service per host, several services  per host.
 Containers: packaging micro service with dependencies, container image and easy to move from enviroment (QA, dev)
 Orchestrator: multiple container, multiple machines. (Kubernates, docker) 
 Continuos Delivery: Automate deployment, cost-effective, quick and reliable
+
+
+Domaing logic
+
+Transactional Script:
+The Transaction Script pattern organizes all the logic as a single procedure (set of instructions) and communicates with the database generating a single transactional communication session.
+
+
+Domain Model:
+The domain model pattern provides an object-oriented way of dealing with complicated logic. Instead of having one procedure that handles all the business logic for a user action, there are multiple objects, each of which handles a part of the domain logic that is relevant to it.
+
+
+Table Model:
+Table Module organizes domain logic with one class per table in the database, and a single instance of a class contains the various procedures that will act on the data
+
+
+Data Mapping layer:
+Use ORM's : good for relational databases.
+Document databases: Easier to map to business objects.
+Command query responsability Segregation (CQRS): Separate model for read (queries) and update (commands)
+
