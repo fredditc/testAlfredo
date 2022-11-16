@@ -131,3 +131,28 @@ Use ORM's : good for relational databases.
 Document databases: Easier to map to business objects.
 Command query responsability Segregation (CQRS): Separate model for read (queries) and update (commands)
 
+Testing MicroServices:
+The test pyramid.
+
+End to end test: complete flow (front - service)
+Service level test: Calling service from outside (postman) http request and it talk to a real database.
+Unit test: is for test Single method of code and can't access the database. You have to use mock objects and return hard-code values.
+
+
+Autehticate and Authorization 
+
+Basic Authentication:
+Username and password are passed in a HTTP header.
+OAuth 2.0 -> Delegate authorization
+OpenID Connect -> Json web token
+Oauth "flows" -> Interaction between client app, authorization server and microservice.
+
+JWT: information about something that allow for authenticate in the service.
+
+Authorization based on ROle:
+-Get is public 
+-put or create is necessary to log in.
+
+Authorization based on Data:
+-Check the token if not is valid is no authorization. If the token is valid check that the user 
+have the correct role for do the operation (put, add, or modify).
