@@ -1,0 +1,138 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red38\green38\blue38;\red247\green247\blue247;
+\red62\green62\blue62;\red234\green236\blue241;\red0\green0\blue0;\red0\green0\blue233;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0\cname textColor;\cssrgb\c20000\c20000\c20000;\cssrgb\c97647\c97647\c97647;
+\cssrgb\c30980\c30980\c30980;\cssrgb\c93333\c94118\c95686;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c93333;}
+\margl1440\margr1440\vieww28600\viewh15020\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 gE4n9Rn81\
+\
+alfTor94!\
+\
+About yourself\
+Soy un desarrollador de software y actualmente tengo 5 a\'f1os de experiencia. Durante toda la experiencia laboral he trabajado JAVA y he ido actualizando conforme las tecnolog\'edas que utilizan las empresas para las que he colaborado lo demandan. El role de mi \'faltimo trabajo era l\'edder del equipo de soporte con 3 personas en el equipo.\
+\
+\
+I am a java tech lead with five years of experience. I've worked with clients in the finance and automatic industries using agile methodologies and back-end frameworks such as spring, spring boot, maven, JPA, and docker.  \
+In my last project, I was a team with three resources (complete with \
+\
+\
+About experiencia\
+Hasta el momento he tenido 3 trabajos de los cuales los primeros dos han sido en el sector financiero, en los cuales desarroll\'e9 el skill de la lectura y compresi\'f3n de algoritmos matem\'e1ticos internos para los diferentes procesos y aprend\'ed las tecnolog\'edas de spring framework, DWR y Ext JS.\
+\
+-Last work experiencia\
+En mi \'faltimo trabajo colabor\'e9 en un proyecto para el sector automotriz donde se esta implementando la industria 4.0, es decir, a la empresa se le genera estadisticas en tiempo real y resultados de producci\'f3n en base a los targets internos. Trabaj\'e9 muy poco con front end con tecnolog\'edas como React y Reac Native y para backend eran servicios rest con spring boot y docker.\
+\
+\'97Desglosar m\'e1s respecto a las actividades.\
+\
+\
+Creaci\'f3n de un proyecto\
+\
+\
+\
+Lambda\
+Optional \
+Stream diferencia\
+ collections repasar\
+\
+Checked Exception:\
+Son excepciones que el compilador fuerza a que sean capturadas y no se pueden ignorar (En un bloque try-catch)  \
+\
+Unchecked: \
+Heredan de RuntimeException pero estas no se capturan ni se pueden lanzar debido a que se consideran errores en la programaci\'f3n (ArrayIndexoutOfBounds, NullpointerException, ArithmeticException)\
+\
+Inyecci\'f3n de dependencias\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 Es una t\'e9cnica donde a un objeto le proveen las dependencias que necesita\cf0  (\cf2 Es una forma de implementar inversi\'f3n de control)
+\f1\b0\fs52 \
+
+\f0\b\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Inversi\'f3n of control\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 Es un principio donde hay un objeto o un programa que cede el control a alguien m\'e1s (framework)\
+Para implementar esto se pueden ocupar patrones de dise\'f1o.\
+En una clase JUnit test, que tiene 3 m\'e9todos y les pones una anotaci\'f3n, el programador no sabe en qu\'e9 momento se ejecutar\'e1 ese m\'e9todo ya que eso lo controla el framework. \
+\pard\pardeftab720\partightenfactor0
+\cf3 \cb4 \expnd0\expndtw0\kerning0
+El contenedor crear\'e1 los objetos, los conectar\'e1, configurar\'e1 y administrar\'e1 su ciclo de vida completo desde la creaci\'f3n hasta la destrucci\'f3n.\cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+@inititilizar (Proyecto)\
+\
+@profile\
+spring.profiles.active=test con diferentes archivos de conf: application-\{mode\}.properties\
+@Profile(\'93mode\'94) es cuando en alg\'fan Repository para los datos vayan a los diferentes posibles beanes.\
+\
+JPA : Especificaci\'f3n de como se deber\'edan de mapear los objetos con la base de datos relacional.\
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 @Entity: Indica que ser\'e1 una entidad de la base de datos\
+@Table: Es para indicar el nombre de la tabla de base de datos si cambia con el nombre de la clase.\
+@Basic\
+@Column: Indica el campo de la base de datos y si lleva el value es porque cambiar el nombre del campo en la base de datos. @Column(name = \'93asa\'94)\
+@GeneratedValue: Se refiere \
+@Id: Indica que ser\'e1 la clave primaria de la tabla\
+@Transient: Significa que no es una relaci\'f3n a un campo de la base de datos y ORM ignora este atributo.\
+@Temporal: Es para indicar la precisi\'f3n de fechas de tiempo @Temporal(TemporalType.TimeStamp)\
+@OneToMany\
+@ManyToOne\
+@ManyToMany\
+@Query (uso de Spring Data JPA)\cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Hibernate: Es la implementaci\'f3n de JPA, permite ejecutar las diferentes operaciones para las bases de datos (consulta, inserci\'f3n, eliminaci\'f3n).\
+\
+Thread\
+\
+Objeto - City and Country\
+\
+Example 6\
+\'97Primer: Listar puros de EUA\
+\'97Segundo ejercicio: Pais nulo\
+\
+-Operaciones intermedias y terminales.\
+-Donde hay collection y el Stream.\
+\
+Bean Factory y App context\
+\
+Cobertura\
+\
+Test driven develpment\
+\
+\
+C\'f3mo revisas tu c\'f3digo?\
+Zonar Q\
+\
+https://www.grammarly.com/signup?afterSurvey=recommend\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs28 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 [7/12 11:26 AM] Perez, Jaynro\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://yalantis.com/blog/how-to-create-a-restful-api/"}}{\fldrslt \cf8 \ul \ulc8 \strokec8 https://yalantis.com/blog/how-to-create-a-restful-api/}}\uc0\u8232 URIs\u8232 End Points\u8232 HTTP Status Code\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.interviewbit.com/junit-interview-questions/"}}{\fldrslt \cf8 \ul \ulc8 \strokec8 https://www.interviewbit.com/junit-interview-questions/}}\uc0\u8232 What is Unit Testing?\u8232 6. What are some of the important annotations provided by JUnit?\u8232 7. 12. What is mocking and stubbing?\u8232 8. 13. What are the JUnit Assert Methods?\u8232 9. What are the best practices for writing Unit Test Cases?\u8232 10. What is the purpose of @Before and @After annotations in JUnit 4?\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.baeldung.com/java-8-interview-questions"}}{\fldrslt \cf8 \ul \ulc8 \strokec8 https://www.baeldung.com/java-8-interview-questions}}\uc0\u8232 Q1. What Is a Method Reference?\u8232 Q1. What Is Optional? How Can It Be Used?\u8232 What Is a Functional Interface? What Are the Rules of Defining a Functional Interface?\u8232 Explain the Syntax and Characteristics of a Lambda Expression\u8232 What Is a Stream? How Does It Differ From a Collection?\u8232 What Is the Difference Between Intermediate and Terminal Operations?\u8232 What Is the Difference Between Map and flatMap Stream Operation\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.edureka.co/blog/interview-questions/java-collections-interview-questions/"}}{\fldrslt \cf8 \ul \ulc8 \strokec8 https://www.edureka.co/blog/interview-questions/java-collections-interview-questions/}}\uc0\u8232 2. What do you understand by Collection Framework in Java?\u8232 3. . List down the primary interfaces provided by Java Collections Framework?\u8232 4. What is the need for overriding equals() method in Java?\u8232 5. 31. Differentiate between Collection and Collections.\u8232 6. 35. Differentiate between Comparable and Comparator.\u8232 7. 43. Differentiate between HashMap and HashTable.\u8232 8. 44. Differentiate between HashSet and HashMap.\u8232 9. 8. Differentiate between HashMap and TreeMap.\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/difference-between-stringbuffer-and-stringbuilder-in-java/?ref=rp"}}{\fldrslt \cf8 \ul \ulc8 \strokec8 https://www.geeksforgeeks.org/difference-between-stringbuffer-and-stringbuilder-in-java/?ref=rp}}\uc0\u8232 {\field{\*\fldinst{HYPERLINK "https://www.journaldev.com/538/string-vs-stringbuffer-vs-stringbuilder"}}{\fldrslt \cf8 \ul \ulc8 \strokec8 https://www.journaldev.com/538/string-vs-stringbuffer-vs-stringbuilder}}\
+How to Create a Really Great RESTful API: Developer\'92s Checklist\
+A complete guide for developers who want to create a RESTful API. Discover what you should consider and what challenges you can face during development.\
+\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/difference-between-and-equals-method-in-java/"}}{\fldrslt \cf0 https://www.geeksforgeeks.org/difference-between-and-equals-method-in-java/}}\
+Difference between comparing String using == and .equals() method in Java - GeeksforGeeks\
+A Computer Science portal for geeks. It contains well written, well thought and well explained computer science and programming articles, quizzes and practice/competitive programming/company interv...\
+\
+\
+https://www.baeldung.com/spring-boot-start (Para la semana)\
+\
+{\field{\*\fldinst{HYPERLINK "https://spring.io/guides/gs/spring-boot/"}}{\fldrslt https://spring.io/guides/gs/spring-boot/}}}
